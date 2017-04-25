@@ -9,7 +9,7 @@
 
 rkt (pronounced _"rock-it"_) is a CLI for running application containers on Linux. rkt is designed to be secure, composable, and standards-based.
 
-Some of rkt's key features and goals include:
+Some of rkt's key features and goals test include:
 
 - _Pod-native_: rkt's basic unit of execution is a [pod][coreos-rkt-pod-blog], linking together resources and user applications in a self-contained environment.
 - _Security_: rkt is developed with a principle of "secure-by-default", and includes a number of important security features like support for [SELinux][selinux], [TPM measurement][tpm], and running app containers in [hardware-isolated VMs][kvm].
