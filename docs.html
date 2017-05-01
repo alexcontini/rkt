@@ -2,36 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="oBEColYSCRykfsZuRhgr85IbvF-04_BfZlaxOGyFCJg"/>
-<meta name="description" content="Documentation and guides for running Linux containers with rkt.">
- 
-<meta itemprop="name" content="CoreOS">
-<meta itemprop="description" content="Documentation and guides for running Linux containers with rkt.">
+<meta name="description" content="A security-minded, standards-based container engine.">
+
+<meta itemprop="name" content="rkt">
+<meta itemprop="description" content="A security-minded, standards-based container engine.">
 <meta itemprop="image" content="http://coreos.com/assets/images/brand/CoreOS-twitter-embed.jpg">
- 
-<meta property="og:title" content="CoreOS"/>
+
+<meta property="og:title" content="rkt"/>
 <meta property="og:image" content="http://coreos.com/assets/images/brand/CoreOS-twitter-embed.jpg"/>
-<meta property="og:description" content="Documentation and guides for running Linux containers with rkt."/>
-<title>Documentation</title>
- 
-<link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta property="og:description" content="A security-minded, standards-based container engine."/>
+<title>rkt, a security-minded, standards-based container engine</title>
+
+<link href="https://coreos.com/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
- 
-<link href="/assets/css/pygments-manni.css" rel="stylesheet">
- 
+
+<link href="https://coreos.com/assets/css/pygments-manni.css" rel="stylesheet">
+
 <meta name="ac-discovery" content="coreos.com/rkt/builder https://github.com/rkt/rkt-builder/releases/download/v{version}/rkt-builder-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/builder https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
+
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-coreos https://github.com/rkt/rkt/releases/download/v{version}/stage1-coreos-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-coreos https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-fly https://github.com/rkt/rkt/releases/download/v{version}/stage1-fly-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-fly https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-kvm https://github.com/rkt/rkt/releases/download/v{version}/stage1-kvm-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-kvm https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
+
 <meta name="ac-discovery" content="coreos.com/etcd https://github.com/coreos/etcd/releases/download/{version}/etcd-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/etcd https://coreos.com/dist/pubkeys/aci-pubkeys.gpg">
 <meta name="ac-discovery-pubkeys" content="coreos.com/etcd https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
@@ -41,28 +41,28 @@
 <meta name="ac-discovery-pubkeys" content="coreos.com/dnsmasq https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/dex https://github.com/coreos/dex/releases/download/{version}/dex-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/dex https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
-<link href="/assets/css/coreos.css" rel="stylesheet">
- 
-<link href="/assets/css/syntax-highlight.css" rel="stylesheet">
- 
+
+<link href="https://coreos.com/assets/css/coreos.css" rel="stylesheet">
+
+<link href="https://coreos.com/assets/css/syntax-highlight.css" rel="stylesheet">
+
 <!--[if lt IE 9]>
   <script src="/assets/js/html5shiv.js"></script>
   <script src="/assets/js/respond.min.js"></script>
 <![endif]-->
 <link href="https://coreos.com/atom.xml" type="application/atom+xml" rel="alternate" title="CoreOS Blog ATOM Feed">
- 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
-<link rel="apple-touch-icon-precomposed" href="/assets/ico/apple-touch-icon-57-precomposed.png">
-<link rel="shortcut icon" href="/assets/ico/favicon.png">
- 
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="www.coreos.com/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="www.coreos.com/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="www.coreos.com/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="www.coreos.com/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="www.coreos.com/assets/ico/favicon.png">
+
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,600,700,900" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700" rel="stylesheet" type="text/css">
- 
+
 <link rel="search" type="application/opensearchdescription+xml" title="CoreOS" href="/opensearch.xml"/>
- 
+
 <script type="text/javascript">
 (function() {
   var didInit = false;
@@ -85,7 +85,7 @@
   document.getElementsByTagName('head')[0].appendChild(s);
 })();
 </script>
- 
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -99,7 +99,7 @@
   ga('send', 'pageview');
 
 </script>
- 
+
 </head>
 <body class="coreos-home co-m-main-nav-transparent co-p-header-large">
  
