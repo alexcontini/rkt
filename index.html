@@ -2,36 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="oBEColYSCRykfsZuRhgr85IbvF-04_BfZlaxOGyFCJg"/>
 <meta name="description" content="A security-minded, standards-based container engine.">
- 
-<meta itemprop="name" content="CoreOS">
+
+<meta itemprop="name" content="rkt">
 <meta itemprop="description" content="A security-minded, standards-based container engine.">
 <meta itemprop="image" content="http://coreos.com/assets/images/brand/CoreOS-twitter-embed.jpg">
- 
-<meta property="og:title" content="CoreOS"/>
+
+<meta property="og:title" content="rkt"/>
 <meta property="og:image" content="http://coreos.com/assets/images/brand/CoreOS-twitter-embed.jpg"/>
 <meta property="og:description" content="A security-minded, standards-based container engine."/>
 <title>rkt, a security-minded, standards-based container engine</title>
- 
+
 <link href="https://coreos.com/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
- 
+
 <link href="https://coreos.com/assets/css/pygments-manni.css" rel="stylesheet">
- 
+
 <meta name="ac-discovery" content="coreos.com/rkt/builder https://github.com/rkt/rkt-builder/releases/download/v{version}/rkt-builder-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/builder https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
+
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-coreos https://github.com/rkt/rkt/releases/download/v{version}/stage1-coreos-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-coreos https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-fly https://github.com/rkt/rkt/releases/download/v{version}/stage1-fly-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-fly https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/rkt/stage1-kvm https://github.com/rkt/rkt/releases/download/v{version}/stage1-kvm-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/rkt/stage1-kvm https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
+
 <meta name="ac-discovery" content="coreos.com/etcd https://github.com/coreos/etcd/releases/download/{version}/etcd-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/etcd https://coreos.com/dist/pubkeys/aci-pubkeys.gpg">
 <meta name="ac-discovery-pubkeys" content="coreos.com/etcd https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
@@ -41,28 +41,28 @@
 <meta name="ac-discovery-pubkeys" content="coreos.com/dnsmasq https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
 <meta name="ac-discovery" content="coreos.com/dex https://github.com/coreos/dex/releases/download/{version}/dex-{version}-{os}-{arch}.{ext}">
 <meta name="ac-discovery-pubkeys" content="coreos.com/dex https://coreos.com/dist/pubkeys/app-signing-pubkey.gpg">
- 
+
 <link href="https://coreos.com/assets/css/coreos.css" rel="stylesheet">
- 
+
 <link href="https://coreos.com/assets/css/syntax-highlight.css" rel="stylesheet">
- 
+
 <!--[if lt IE 9]>
   <script src="/assets/js/html5shiv.js"></script>
   <script src="/assets/js/respond.min.js"></script>
 <![endif]-->
 <link href="https://coreos.com/atom.xml" type="application/atom+xml" rel="alternate" title="CoreOS Blog ATOM Feed">
- 
+
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="www.coreos.com/assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="www.coreos.com/assets/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="www.coreos.com/assets/ico/apple-touch-icon-72-precomposed.png">
 <link rel="apple-touch-icon-precomposed" href="www.coreos.com/assets/ico/apple-touch-icon-57-precomposed.png">
 <link rel="shortcut icon" href="www.coreos.com/assets/ico/favicon.png">
- 
+
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,400italic,600,700,900" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700" rel="stylesheet" type="text/css">
- 
+
 <link rel="search" type="application/opensearchdescription+xml" title="CoreOS" href="/opensearch.xml"/>
- 
+
 <script type="text/javascript">
 (function() {
   var didInit = false;
@@ -85,7 +85,7 @@
   document.getElementsByTagName('head')[0].appendChild(s);
 })();
 </script>
- 
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -99,26 +99,27 @@
   ga('send', 'pageview');
 
 </script>
- 
+
 </head>
 <body class="coreos-home co-m-main-nav-transparent co-p-header-large">
- 
+
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMX2DX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MMX2DX');</script>
- 
- 
+
+
 <div class="co-p-docs-masthead">
 <div class="co-p-header-masthead co-p-header-masthead-twolevel co-p-background-hexagons">
- 
+
+<!--
 <div class="co-m-global-nav">
 <div class="co-m-global-nav">
 </div>
 </div>
- 
+
 <div class="co-m-main-nav">
 <div class="navbar navbar-static-top coreos-nav co-m-main-nav-container" role="navigation">
 <div class="container">
@@ -290,7 +291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li class="dropdown co-m-dropdown co-m-main-nav-products co-p-main-nav-toplevel co-p-main-nav-toplevel">
 <a href="/contact" data-category="Main Navigation" data-event="Contact Us">Contact Us</a>
 </li>
-</ul> 
+</ul>
 <div class="navbar-right">
 <a class="login-link" href="https://account.coreos.com/">Login</a>
 <div class="search">
@@ -301,10 +302,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="glyphicon glyphicon-search search-icon"></span>
 </div>
 </div>
-</div> 
-</div> 
-</div> 
 </div>
+</div>
+</div>
+</div>-->
 <div class="container co-p-header-masthead-content co-p-header-masthead-left">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="xMidYMin" height="50px" viewBox="0 0 253.846 106.509" enable-background="new 0 0 253.846 106.509" xml:space="preserve">
 <defs>
@@ -353,7 +354,7 @@ Overview
 </a>
 </li>
 <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 co-p-masthead-nav-tab ">
-<a href="/rkt/docs/latest/" class="btn-icon-left" data-category="rkt Masthead Tab" data-event="rkt: Documentation">
+<a href="https://alexcontini.github.io/rkt/docs/latest/" class="btn-icon-left" data-category="rkt Masthead Tab" data-event="rkt: Documentation">
 <span class="fa fa-book"></span>
 Documentation
 </a>
@@ -367,8 +368,8 @@ GitHub Project
 </ul>
 </div>
 </div>
-</div> 
-</div> 
+</div>
+</div>
 </div>
 <div class="co-p-rkt">
 <div class="super-container co-p-rkt-overview">
@@ -385,11 +386,11 @@ GitHub Project
 <div class="row">
 <div class="col-lg-12 col-md-12 col-md-push-0 col-sm-6 col-sm-push-6 col-xs-12">
 <div class="co-p-homepage-subnav">
-<h4>The latest on rkt</h4>
-<ul>
-<li><a herf="/blog/rkt-container-runtime-to-the-cncf.html">CoreOS's rkt and Docker's containerd jointly donated to CNCF</a></li>
-<li><a herf="/blog/rkt-and-kubernetes.html">What Kubernetes users should know about the rkt container engine</a></li>
-</ul>
+
+
+We are a Cloud Native Computing Foundation member&nbsp;project.</a><br>
+<a href="cncf.io"><img src="https://www.cncf.io/wp-content/uploads/sites/2/2016/09/logo_cncf.png" style="width:60%"></a>
+
 </div>
 </div>
 <div class="col-lg-12 col-md-12 col-md-pull-0 col-sm-6 col-sm-pull-6 col-xs-12">
@@ -926,7 +927,7 @@ acbuild --debug write --overwrite nginx-latest-linux-amd64.aci</code></pre>
 
 </div>
 
-
+<!--
     <div class="co-m-footer footer-dark">
     <div class="container">
     <div class="row co-m-footer-top">
@@ -981,13 +982,12 @@ acbuild --debug write --overwrite nginx-latest-linux-amd64.aci</code></pre>
             <li><a href="/rkt/docs/latest/" data-category="Footer" data-event="rkt: Docs">rkt</a></li>
             <li><a href="/flannel/docs/latest/" data-category="Footer" data-event="flannel: Docs">flannel</a></li>
           </ul>
-        </div>
+        </div>-->
         <div class="co-m-footer-group hidden-sm">
-          <h4>Events</h4>
-          <ul>
-            <li><a href="/community/" data-category="Footer" data-event="Footer: Community">Community &amp; Meetups</a></li>
-            <li><a href="/fest/" data-category="Footer" data-event="Fest: Overview">CoreOS Fest 2017</a></li>
-          </ul>
+          <h4 style="width:80%;text-align:center;font-size:13px;font-weight:light;margin-left:10%;line-height:18px">© 2017 The CoreDNS Authors<br>
+Documentation Distributed under CC BY 4.0
+Copyright © 2017 The Linux Foundation®. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks.<br> For a list of trademarks of The Linux Foundation please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage page.</a></h4>
+
         </div>
       </div>
     </div>
